@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdaptyKey</key>
+	<string>public_live_qR4AxLe5.gj7poeNnqHyE49FeNoTy</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BaiJamjuree-Bold.ttf</string>
+		<string>BaiJamjuree-ExtraLight.ttf</string>
+		<string>BaiJamjuree-Light.ttf</string>
+		<string>BaiJamjuree-Medium.ttf</string>
+		<string>BaiJamjuree-Regular.ttf</string>
+		<string>BaiJamjuree-SemiBold.ttf</string>
+	</array>
+</dict>
+</plist>
