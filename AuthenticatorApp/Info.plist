@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdaptyKey</key>
+	<string>public_live_qR4AxLe5.gj7poeNnqHyE49FeNoTy</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BaiJamjuree-Bold.ttf</string>
+		<string>BaiJamjuree-ExtraLight.ttf</string>
+		<string>BaiJamjuree-Light.ttf</string>
+		<string>BaiJamjuree-Medium.ttf</string>
+		<string>BaiJamjuree-Regular.ttf</string>
+		<string>BaiJamjuree-SemiBold.ttf</string>
+	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>asjdkasjdas</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>We value your feedback to help us improve!</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>🌟 Enjoying our app?</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>rating</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>qkodfqwopdqwk</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>We'll respond to you as soon as possible!</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>❓Need help or have questions?</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>question</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>jqiiqjwqdwd</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Contact us for help with unsubscribing.</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>⛔ How to stop your subscription</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>help</string>
+		</dict>
+	</array>
+</dict>
+</plist>
