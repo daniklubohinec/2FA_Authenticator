@@ -19,7 +19,7 @@ struct AuthenticatorAppApp: App {
             RootView()
                 .environmentObject(purchaseService)
                 .environmentObject(globalPWState)
-//                .ignoresSafeArea(.container)
+                .edgesIgnoringSafeArea(.vertical)
         }
     }
 }

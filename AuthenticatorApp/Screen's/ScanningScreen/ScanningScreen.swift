@@ -52,16 +52,8 @@ struct ScanningScreen: View {
             .padding(.bottom, 40)
         }
         .onAppear {
-            //            cameraManager.requestPermission()
             checkUserCameraAccess()
-            print("Camera Permission:", cameraManager.permissionGranted)
         }
-        //        .onReceive(scanQRCodeVM.publisher) { account in
-        //            scanQRCodeVM.addAccountVM = AddAccountViewModel(account: account)
-        //                        selectedTab = 0
-        //                        CustomTabBar(selectedTab: $selectedTab)
-        //            scanQRCodeVM.showAddAccountView = true
-        //        }
         .onReceive(scanQRCodeVM.publisher) { account in
             scanQRCodeVM.addAccountVM = AddAccountViewModel(account: account)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {

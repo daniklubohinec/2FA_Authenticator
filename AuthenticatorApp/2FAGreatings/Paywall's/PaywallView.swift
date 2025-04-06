@@ -44,6 +44,8 @@ struct PaywallView: View {
             Spacer()
             contentSection
         }
+        .safeAreaPadding(.top, 50)
+        .safeAreaPadding(.bottom, 28)
         .background(
             Image(.eqpowfqwfq)
                 .resizable()
@@ -64,25 +66,23 @@ struct PaywallView: View {
         }
         .alert("Error", isPresented: $showNoRestoreAlert) {
             Button {
-                showNoRestoreAlert = false
+                
             } label: {
                 Text("OK")
             }
         } message: {
-            Text("We didn't find any subscription to restore")
+            Text("We can't find active subscriptions to restore")
         }
-//        .alert("Oops...", isPresented: $showFailedAlert) {
-//            Button {
-//                showFailedAlert = false
-//            } label: {
-//                Text("Cancel")
-//            }
-//            Button(role: .cancel, action: subscribe) {
-//                Text("Try again")
-//            }
-//        } message: {
-//            Text("Something went wrong.\nPlease try again")
-//        }
+        .alert("Oops...", isPresented: $showFailedAlert) {
+            Button("Cancel") { }
+            Button(role: .cancel) {
+                subscribe()
+            } label: {
+                Text("Try again")
+            }
+        } message: {
+            Text("Something went wrong. \nPlease try again")
+        }
         .onAppear {
             if !completed {
                 //some time to load the necessary data

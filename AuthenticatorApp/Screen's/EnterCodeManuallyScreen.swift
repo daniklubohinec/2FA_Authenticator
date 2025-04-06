@@ -70,8 +70,6 @@ struct EnterCodeManuallyScreen: View {
                 Spacer()
                 
                 GradientButton(title: "Add") {
-//                                        addAccountVM.add()
-//                                        dismissScreen()
                     startAutomation()
                 }
                 .disabled(!addAccountVM.formIsValid)

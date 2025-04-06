@@ -34,6 +34,8 @@ struct OnboardingView: View {
                 viewModel.requestAppReview()
             }
         }
+        .safeAreaPadding(.top, 50)
+        .safeAreaPadding(.bottom, 28)
     }
     
     private var contentSection: some View {

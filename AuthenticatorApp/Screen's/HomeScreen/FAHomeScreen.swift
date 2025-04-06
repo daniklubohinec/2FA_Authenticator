@@ -116,7 +116,6 @@ struct FAHomeScreen: View {
         return PhotosPicker(selection: $selectedItem, matching: .images) {
             Image(.ashfahfasjfa)
         }
-        //        .onChange(of: selectedItem, perform: handleImageSelection)
         .onChange(of: selectedItem) { newItem in
             Task {
                 await loadImage(from: newItem)

@@ -14,6 +14,7 @@ struct InAppPaywallView: View {
     @StateObject var viewModel = AccessScreenViewModel()
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var purchaseService: PurchaseService
+    @Environment(\.dismiss) var dismiss
     
     let paywall: PaywallModel
     
@@ -34,6 +35,8 @@ struct InAppPaywallView: View {
                 Spacer()
                 contentSection
             }
+            .safeAreaPadding(.top, 50)
+            .safeAreaPadding(.bottom, 28)
             .background(
                 Image(.hbsfjgksdjfds)
                     .resizable()
@@ -52,26 +55,15 @@ struct InAppPaywallView: View {
                     }
                 }
             }
-//            .alert("Oops...", isPresented: $showFailedAlert) {
-//                Button(role: .cancel, action: makePurchase) {
-//                    Text("Try again")
-//                }
-//                Button {
-//                    showFailedAlert = false
-//                } label: {
-//                    Text("Cancel")
-//                }
-//            } message: {
-//                Text("Something went wrong. \nPlease try again")
-//            }
-            .alert("Error", isPresented: $showNoRestoreAlert) {
-                Button {
-                    showNoRestoreAlert = false
+            .alert("Oops...", isPresented: $showFailedAlert) {
+                Button("Cancel") { }
+                Button(role: .cancel) {
+                    makePurchase()
                 } label: {
-                    Text("OK")
+                    Text("Try again")
                 }
             } message: {
-                Text("We didn't find any subscription to restore")
+                Text("Something went wrong. \nPlease try again")
             }
             .onAppear {
                 if !completed {
@@ -81,6 +73,7 @@ struct InAppPaywallView: View {
                     }
                 }
             }
+            .edgesIgnoringSafeArea(.vertical)
         }
     }
     
@@ -94,8 +87,6 @@ struct InAppPaywallView: View {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(purchaseService.isFV ? .afaskjdaskd : .sjhfgajkfasf)
-//                        .padding(.bottom, 60)
-//                        .padding(.trailing, 20)
                 }
             }
         }
@@ -236,7 +227,7 @@ extension InAppPaywallView {
         Task {
             await purchaseService.makePurchase(product: selectedPlan)
             if purchaseService.hasPremium {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             } else {
                 showFailedAlert = true
             }

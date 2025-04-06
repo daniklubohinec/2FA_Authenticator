@@ -48,11 +48,6 @@ struct TabBarScreensView: View {
                     .tag(TabbedItems.scan.rawValue)
                     .padding(.bottom)
                     
-                    //                    ScanningScreen(scanQRCodeVM: ScanQRCodeViewModel(), selectedTab: $selectedTab)
-                    //                        .id(selectedTab)
-                    //                        .tag(TabbedItems.scan.rawValue)
-                    //                        .padding(.bottom)
-                    
                     UserSettingsScreen(appState: appState)
                         .tag(TabbedItems.settings.rawValue)
                         .padding(.horizontal)
@@ -63,6 +58,8 @@ struct TabBarScreensView: View {
                 AuthView(authenticate: authenticate)
             }
         }
+        .safeAreaPadding(.top, 50)
+        .safeAreaPadding(.bottom, 28)
         .onAppear {
             authenticate()
         }
